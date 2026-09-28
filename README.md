@@ -40,9 +40,8 @@ Updates are checked automatically (Sparkle); you can switch it off in Settings.
 - **In the app window**: select a fragment and press a mode; with nothing selected the whole text
   changes. Offline spell check with the macOS dictionaries.
 - **In any application** via hotkeys (change them in Settings ⌘,):
-  ⌥⇧U upper, ⌥⇧L lower, ⌥⇧T title, ⌥⇧S sentence, ⌥⇧I invert,
-  ⌥⇧C next case (cycles), ⌥⇧X switch layout. They act on the selection, or without one on the
-  word under the caret.
+  ⌃L switch layout; ⌥⇧U upper, ⌥⇧L lower, ⌥⇧T title, ⌥⇧S sentence, ⌥⇧I invert,
+  ⌥⇧C next case (cycles). They act on the selection, or without one on the word under the caret.
 - **Layout auto-correction** (toggle in the menu bar): a word typed in the wrong layout, like
   “ghbdtn”, is replaced with the word you meant the moment you type a space, and the input source
   switches. The macOS dictionaries decide, so real words are left alone. Never runs in
