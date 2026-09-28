@@ -1,8 +1,8 @@
 # Case Converter
 
-A macOS app that changes the case of text and fixes text typed in the wrong keyboard layout
-(US ↔ Russian: `ghbdtn` becomes the Russian word you meant). Works in any application via a hotkey,
-from the menu bar and through the Services menu. Interface in English and Russian.
+A macOS app that changes the case of text and fixes text typed with the wrong keyboard layout
+active (a word like `ghbdtn` becomes the word you meant). Works in any application via a hotkey,
+from the menu bar and through the Services menu.
 
 **Download:** [latest release](https://github.com/Damon4/case-converter-releases/releases/latest) → `CaseConverter-x.y.z.dmg`.
 Requires macOS 14 or newer. Apple Silicon and Intel.
@@ -34,7 +34,7 @@ Updates are checked automatically (Sparkle); you can switch it off in Settings.
 | Title Case       | `Hello, World`             |
 | Sentence case    | `Hello, world. How are you?` |
 | iNVERT cASE      | `hELLO, wORLD`             |
-| Switch layout    | `ghbdtn` → the Russian “hello”; works both ways |
+| Switch layout    | `ghbdtn` → the word you meant; works both ways |
 | For developers   | camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE |
 
 - **In the app window**: select a fragment and press a mode; with nothing selected the whole text
@@ -45,10 +45,9 @@ Updates are checked automatically (Sparkle); you can switch it off in Settings.
   word under the caret.
 - **Layout auto-correction** (toggle in the menu bar): a word typed in the wrong layout, like
   “ghbdtn”, is replaced with the word you meant the moment you type a space, and the input source
-  switches. The macOS dictionaries decide, so real English words are left alone. Never runs in
+  switches. The macOS dictionaries decide, so real words are left alone. Never runs in
   password fields.
 - **Without any permission**: select text → right click → Services → Case Converter.
-- **Language**: follows the system language (English or Russian); switchable in Settings.
 
 ## Feedback
 
