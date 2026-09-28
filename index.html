@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Case converter: UPPER CASE, lower case, Title Case, Sentence case, iNVERT cASE, camelCase, snake_case, a fix for text typed in the wrong keyboard layout, and spell check."
+    />
+    <title>Case Converter</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23fff' text-anchor='middle'%3EAa%3C/text%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="./assets/index-BD638974.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-6XTFRcks.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="head">
+        <h1>Case Converter</h1>
+        <p class="lead">
+          Changes the case of your text. Select a fragment to change only that part.
+          Everything runs in your browser; nothing leaves it<span class="lead-note"> (except spell check)</span>.
+        </p>
+      </header>
+
+      <section class="editor" aria-label="Text">
+        <textarea
+          id="text"
+          placeholder="Paste or type text…"
+          spellcheck="true"
+          autocomplete="off"
+          autocapitalize="off"
+          autofocus
+        ></textarea>
+        <div class="editor-bar">
+          <span id="stats" class="stats" aria-live="polite">0 characters</span>
+          <span id="toast" class="toast" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <section class="modes" aria-label="Modes">
+        <div id="modes-primary" class="mode-row"></div>
+        <details class="dev">
+          <summary>For developers</summary>
+          <div id="modes-dev" class="mode-row"></div>
+        </details>
+      </section>
+
+      <section class="actions" aria-label="Actions">
+        <button type="button" id="copy" class="btn">Copy</button>
+        <button type="button" id="paste" class="btn">Paste</button>
+        <button type="button" id="clear" class="btn btn-quiet">Clear</button>
+        <span class="spacer"></span>
+        <label class="select">
+          <span class="visually-hidden">Spell check language</span>
+          <select id="spell-lang">
+            <option value="auto">Language: auto</option>
+            <option value="en-US">English</option>
+          </select>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="spell-only" />
+          Spelling only
+        </label>
+        <button type="button" id="spell-run" class="btn btn-accent">Check spelling</button>
+      </section>
+
+      <section id="spell" class="spell" aria-label="Spell check results" hidden>
+        <div class="spell-head">
+          <strong id="spell-status"></strong>
+          <button type="button" id="spell-close" class="btn btn-quiet btn-sm" aria-label="Close">Close</button>
+        </div>
+        <ol id="spell-list" class="spell-list"></ol>
+        <p class="spell-note">
+          Checked by <a href="https://languagetool.org" rel="noopener" target="_blank">LanguageTool</a>:
+          the text is sent to their server. Limits: 20,000 characters and 20 checks per minute.
+        </p>
+      </section>
+
+      <footer class="foot">
+        <p>
+          Shortcuts: <kbd>⌥1</kbd>–<kbd>⌥5</kbd> main modes, <kbd>⌥L</kbd> switch layout,
+          <kbd>⌥6</kbd>–<kbd>⌥0</kbd> developer modes, <kbd>⌘Z</kbd> undo.
+        </p>
+        <p>
+          There is a <a href="https://github.com/Damon4/case-converter-releases/releases/latest" rel="noopener">macOS app</a>:
+          the same modes via a hotkey in any application, automatic keyboard layout correction, offline spell check.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
